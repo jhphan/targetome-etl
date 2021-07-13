@@ -2,7 +2,7 @@
 
 usage () {
     echo "Usage: $(basename "$0")"
-    echo "  --export_directory => Directory to put the exported TSV files"
+    echo "  --export_dir => Directory to put the exported TSV files"
     echo "  --help => Display this help message"
 }
 
@@ -84,7 +84,7 @@ mkdir -p ${EXPORT_DIR_FULL}
 sudo rm -rf /tmp/targetome_*
 
 # List of tables in database to iterate
-TABLE_LIST=(Drug DrugSyn_SET ExpEvidence Interaction LitEvidence Source Target TargetSyn_SET expEvidenceSource_Set interactionExpEvidence_Set interactionSources_Set)
+TABLE_LIST=(DatabaseRef Drug DrugSyn_SET ExpEvidence Interaction LitEvidence Source Target TargetSyn_SET expEvidenceSource_Set interactionExpEvidence_Set interactionSources_Set)
 
 for table in ${TABLE_LIST[@]}; do
     echo "${table}"
